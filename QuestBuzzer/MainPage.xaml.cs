@@ -112,7 +112,7 @@ namespace QuestBuzzer
 
         private void nextTeamButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-
+            // TODO: Show current team and toggle to next team
         }
 
 
