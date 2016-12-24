@@ -1309,6 +1309,16 @@ namespace Windows.Devices.Gpio
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 		}
 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public void Write(global::Windows.Devices.Gpio.GpioPinValue value)
+		{
+			global::Windows.Devices.Gpio.IGpioPin__Impl.StubClass.Write(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
 		public GpioPin(global::System.IntPtr dummy)
 		{
 		}
@@ -1399,6 +1409,9 @@ namespace Windows.Devices.Gpio
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		void SetDriveMode(global::Windows.Devices.Gpio.GpioPinDriveMode value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void Write(global::Windows.Devices.Gpio.GpioPinValue value);
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -1448,6 +1461,15 @@ namespace Windows.Devices.Gpio
 		OutputOpenDrainPullUp = 5,
 		OutputOpenSource = 6,
 		OutputOpenSourcePullDown = 7,
+	}
+
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public enum GpioPinValue
+	{
+		Low = 0,
+		High = 1,
 	}
 }
 

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Windows.Devices.Gpio;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Shapes;
-using Windows.UI.Xaml.Media;
+
 
 namespace QuestBuzzer
 {
@@ -17,6 +13,13 @@ namespace QuestBuzzer
         private TextBlock teamName;
         private TextBlock elapsedName;
         private string teamNumber;
+        private GpioPin ledPin;
+
+        public GpioPin LedPin
+        {
+            get { return ledPin; }
+            set { ledPin = value; }
+        }
 
         public int ColumnPosition
         {

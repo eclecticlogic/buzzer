@@ -62,21 +62,25 @@ namespace QuestBuzzer
 
         private void InitGPIO()
         {
-            pins.Add(createPin(5, "1"));
-            pins.Add(createPin(6, "2"));
-            pins.Add(createPin(13, "3"));
-            pins.Add(createPin(19, "4"));
-            pins.Add(createPin(26, "5"));
+            pins.Add(createButtonPin(5, "1", 21));
+            pins.Add(createButtonPin(6, "2", 20));
+            pins.Add(createButtonPin(13, "3", 9));
+            pins.Add(createButtonPin(19, "4", 10));
+            pins.Add(createButtonPin(26, "5", 11));
         }
 
-        private GpioPin createPin(int pinNumber, string teamNumber)
+        private GpioPin createButtonPin(int pinNumber, string teamNumber, int ledPinNumber)
         {
             var gpio = GpioController.GetDefault();
             GpioPin pin = gpio.OpenPin(pinNumber);
             pin.SetDriveMode(GpioPinDriveMode.InputPullUp);
             pin.DebounceTimeout = TimeSpan.FromMilliseconds(2);
             pin.ValueChanged += PinValueChanged;
-            statusByPin[pinNumber] = new BuzzerStatus() { TeamNumber = teamNumber };
+
+            GpioPin ledPin = gpio.OpenPin(ledPinNumber);
+            ledPin.SetDriveMode(GpioPinDriveMode.Output);
+            ledPin.Write(GpioPinValue.Low);
+            statusByPin[pinNumber] = new BuzzerStatus() { TeamNumber = teamNumber, LedPin = ledPin };
             return pin;
         }
 
@@ -92,6 +96,11 @@ namespace QuestBuzzer
                 var buzzerStatus = statusByPin[sender.PinNumber];
                 buzzerStatus.ColumnPosition = thisTeamPosition - 1;
                 buzzerStatus.TimePressed = now;
+                if (thisTeamPosition == 1)
+                {
+                    buzzerStatus.LedPin.Write(GpioPinValue.High);
+                    currentLedPin = buzzerStatus.LedPin;
+                }
 
                 var task = Dispatcher.RunIdleAsync((v) => {
                     Ellipse el = buzzerStatus.ButtonEllipse;
@@ -112,12 +121,42 @@ namespace QuestBuzzer
 
         private void nextTeamButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            // TODO: Show current team and toggle to next team
+            if (currentLedPin != null)
+            {
+                int currentTeam = -1;
+                foreach (BuzzerStatus bs in statusByPin.Values)
+                {
+                    if (bs.LedPin == currentLedPin)
+                    {
+                        currentTeam = bs.ColumnPosition;
+                    }
+                }
+                int nextTeam = currentTeam + 1;
+                GpioPin nextLedPin = null;
+                foreach (BuzzerStatus bs in statusByPin.Values)
+                {
+                    if (bs.ColumnPosition == nextTeam)
+                    {
+                        nextLedPin = bs.LedPin;
+                    }
+                }
+                if (nextLedPin != null)
+                {
+                    currentLedPin.Write(GpioPinValue.Low);
+                    nextLedPin.Write(GpioPinValue.High);
+                    currentLedPin = nextLedPin;
+                }
+            }
         }
 
 
         private void resetButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if (currentLedPin != null)
+            {
+                currentLedPin.Write(GpioPinValue.Low);
+                currentLedPin = null;
+            }
             pressTime = DateTime.Now.Ticks;
             alreadyPressed.Clear();
             teamPosition = 0;
@@ -133,6 +172,7 @@ namespace QuestBuzzer
         private IDictionary<int, bool> alreadyPressed = new ConcurrentDictionary<int, bool>();
         private IDictionary<int, BuzzerStatus> statusByPin = new Dictionary<int, BuzzerStatus>();
 
+        GpioPin currentLedPin;
         private List<GpioPin> pins = new List<GpioPin>();
         private long pressTime;
         private int teamPosition;

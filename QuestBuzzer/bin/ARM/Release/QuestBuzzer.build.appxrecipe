@@ -10,62 +10,62 @@
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>42dc724f-dbaa-4545-84da-9dfbb1414a11</PackageIdentityName>
     <PackageIdentityPublisher>CN=kabram</PackageIdentityPublisher>
-    <IntermediateOutputPath>c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\obj\ARM\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\obj\ARM\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.dll">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.dll">
       <PackagePath>QuestBuzzer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.exe">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.exe">
       <PackagePath>QuestBuzzer.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.pdb">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.pdb">
       <PackagePath>QuestBuzzer.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\kabram\documents\visual studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>

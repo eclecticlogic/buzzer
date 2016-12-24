@@ -8610,6 +8610,19 @@ namespace Windows.Devices.Gpio
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void Write(
+						global::System.__ComObject __this, 
+						global::Windows.Devices.Gpio.GpioPinValue value)
+			{
+				global::McgInterop.ForwardComSharedStubs.Proc_int<global::Windows.Devices.Gpio.IGpioPin>(
+									__this, 
+									((int)value), 
+									global::Windows.Devices.Gpio.IGpioPin__Impl.Vtbl.idx_Write
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
 		}
 
 		// DispatchClass for 'Windows.Devices.Gpio.IGpioPin'
@@ -8673,6 +8686,16 @@ namespace Windows.Devices.Gpio
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Devices.Gpio.IGpioPin.Write(global::Windows.Devices.Gpio.GpioPinValue value)
+			{
+				global::Windows.Devices.Gpio.IGpioPin__Impl.StubClass.Write(
+									this, 
+									value
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
 		}
 
 		// v-table for 'Windows.Devices.Gpio.IGpioPin'
@@ -8684,6 +8707,7 @@ namespace Windows.Devices.Gpio
 			internal const int idx_put_DebounceTimeout = 9;
 			internal const int idx_get_PinNumber = 10;
 			internal const int idx_SetDriveMode = 14;
+			internal const int idx_Write = 15;
 		}
 	}
 
