@@ -28,7 +28,7 @@
     <AppXManifest Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-24T19:08:59.593</Modified>
+      <Modified>2016-12-27T20:53:23.237</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -77,20 +77,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.dll">
       <PackagePath>QuestBuzzer.dll</PackagePath>
-      <Modified>2016-12-24T19:08:59.371</Modified>
+      <Modified>2016-12-27T20:53:23.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.exe">
       <PackagePath>QuestBuzzer.exe</PackagePath>
-      <Modified>2016-12-24T19:08:59.563</Modified>
+      <Modified>2016-12-27T20:53:23.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\QuestBuzzer.pdb">
       <PackagePath>QuestBuzzer.pdb</PackagePath>
-      <Modified>2016-12-24T19:08:59.545</Modified>
+      <Modified>2016-12-27T20:53:23.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kabram\Documents\Visual Studio 2015\Projects\QuestBuzzer\QuestBuzzer\bin\ARM\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-24T18:12:46.407</Modified>
+      <Modified>2016-12-27T20:53:08.305</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

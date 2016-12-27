@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:QuestBuzzer"
+    xmlns:c="using:QuestBuzzer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,11 +15,14 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="buttonStatusGrid" Grid.Row="0">
+            <Grid.Resources>
+                <c:MathConverter x:Key="mathConverter" />
+            </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition x:Name="column1" Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -35,6 +39,11 @@
                  Fill="Blue" Grid.Row="1" Grid.Column="3" Margin="5"/>
             <Ellipse x:Name="yellowEllipse" HorizontalAlignment="Stretch" Height="{Binding ElementName=yellowEllipse, Path=ActualWidth}" 
                  Fill="Yellow" Grid.Row="1" Grid.Column="4" Margin="5"/>
+
+            <Ellipse x:Name="currentTeamMarker" HorizontalAlignment="Center" 
+                     Width="{Binding ElementName=column1, Path=ActualWidth, Converter={StaticResource mathConverter}, ConverterParameter=@VALUE/2}" 
+                     Height="{Binding ElementName=column1, Path=ActualWidth, Converter={StaticResource mathConverter}, ConverterParameter=@VALUE/2}" 
+                 Fill="Black" Grid.Row="1" Grid.Column="0" Margin="5"/>
 
             <TextBlock x:Name="whiteTeam" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0 10 0 0" FontSize="20" TextAlignment="Center"/>
             <TextBlock x:Name="redTeam" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0 10 0 0" FontSize="20" TextAlignment="Center"/>

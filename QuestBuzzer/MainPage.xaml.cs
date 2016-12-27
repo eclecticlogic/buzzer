@@ -56,7 +56,7 @@ namespace QuestBuzzer
 
             foreach (BuzzerStatus bs in statusByPin.Values)
             {
-                buttonStatusGrid.Children.Remove(bs.ButtonEllipse);
+                //buttonStatusGrid.Children.Remove(bs.ButtonEllipse);
             }
         }
 

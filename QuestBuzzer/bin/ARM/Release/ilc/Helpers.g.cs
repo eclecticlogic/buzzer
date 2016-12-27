@@ -1930,9 +1930,9 @@ namespace McgInterop
 
 		public delegate object AddrOfTarget149<T>(global::System.Collections.Generic.IEnumerable<T> a0);
 
-		public delegate object AddrOfTarget150(global::System.__ComObject a0);
+		public delegate object AddrOfTarget150(object a0);
 
-		public delegate object AddrOfTarget151(object a0);
+		public delegate object AddrOfTarget151(global::System.__ComObject a0);
 
 		public delegate int AddrOfTarget152(
 					ref global::Windows.UI.Xaml.Markup.XmlnsDefinition a0, 
