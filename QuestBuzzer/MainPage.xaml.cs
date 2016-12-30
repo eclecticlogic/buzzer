@@ -56,8 +56,9 @@ namespace QuestBuzzer
 
             foreach (BuzzerStatus bs in statusByPin.Values)
             {
-                //buttonStatusGrid.Children.Remove(bs.ButtonEllipse);
+                buttonStatusGrid.Children.Remove(bs.ButtonEllipse);
             }
+            buttonStatusGrid.Children.Remove(currentTeamMarker);
         }
 
         private void InitGPIO()
@@ -114,6 +115,11 @@ namespace QuestBuzzer
                     double seconds = elapsed / 1000.0;
                     buzzerStatus.ElapsedDisplay.Text = seconds.ToString();
                     Grid.SetColumn(buzzerStatus.ElapsedDisplay, buzzerStatus.ColumnPosition);
+                    if (buzzerStatus.ColumnPosition == 0)
+                    {
+                        buttonStatusGrid.Children.Add(currentTeamMarker);
+                        Grid.SetColumn(currentTeamMarker, 0);
+                    }
                 });
             }
         }
@@ -145,6 +151,10 @@ namespace QuestBuzzer
                     currentLedPin.Write(GpioPinValue.Low);
                     nextLedPin.Write(GpioPinValue.High);
                     currentLedPin = nextLedPin;
+                    // To ensure marker is on top, remove and add ...
+                    buttonStatusGrid.Children.Remove(currentTeamMarker);
+                    buttonStatusGrid.Children.Add(currentTeamMarker);
+                    Grid.SetColumn(currentTeamMarker, Grid.GetColumn(currentTeamMarker) + 1);
                 }
             }
         }
@@ -166,6 +176,7 @@ namespace QuestBuzzer
                 bs.TeamDisplay.Text = "";
                 bs.ElapsedDisplay.Text = "";
             }
+            buttonStatusGrid.Children.Remove(currentTeamMarker);
         }
 
 
