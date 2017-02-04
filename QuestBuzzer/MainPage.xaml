@@ -67,8 +67,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="nextTeamButton" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Next Team" Grid.Column="0" Click="nextTeamButton_Click"/>
-            <Button x:Name="resetButton" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Reset" Grid.Column="1" Click="resetButton_Click"/>
+            <Button x:Name="nextTeamButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Click="nextTeamButton_Click" Background="{x:Null}">
+                <Image Source="Assets/arrow-58-256.png" Height="128" Margin="0,0,2,0" Width="128" />
+            </Button>
+            <Button x:Name="resetButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Click="resetButton_Click" Background="{x:Null}">
+                <Image Source="Assets/refresh-256.png" Width="128" Height="128" />
+            </Button>
         </Grid>
     </Grid>
 </Page>
