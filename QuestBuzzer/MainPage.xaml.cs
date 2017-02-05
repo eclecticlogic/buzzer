@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Collections.Concurrent;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.Devices.Gpio;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Shapes;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -175,10 +168,15 @@ namespace QuestBuzzer
                 buttonStatusGrid.Children.Remove(bs.ButtonEllipse);
                 bs.TeamDisplay.Text = "";
                 bs.ElapsedDisplay.Text = "";
+                bs.ColumnPosition = 0;
             }
             buttonStatusGrid.Children.Remove(currentTeamMarker);
         }
 
+        private void powerButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.FromSeconds(0));
+        }
 
         private IDictionary<int, bool> alreadyPressed = new ConcurrentDictionary<int, bool>();
         private IDictionary<int, BuzzerStatus> statusByPin = new Dictionary<int, BuzzerStatus>();
@@ -188,5 +186,6 @@ namespace QuestBuzzer
         private long pressTime;
         private int teamPosition;
 
+       
     }
 }

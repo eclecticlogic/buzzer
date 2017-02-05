@@ -109,8 +109,9 @@
     <None Include="QuestBuzzer_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\arrow-58-256.png" />
-    <Content Include="Assets\refresh-256.png" />
+    <Content Include="Assets\arrow-61-128.png" />
+    <Content Include="Assets\plus-4-128.png" />
+    <Content Include="Assets\power-48.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

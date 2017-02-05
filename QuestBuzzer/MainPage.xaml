@@ -68,10 +68,13 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="nextTeamButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Click="nextTeamButton_Click" Background="{x:Null}">
-                <Image Source="Assets/arrow-58-256.png" Height="128" Margin="0,0,2,0" Width="128" />
+                <Image Source="Assets/arrow-61-128.png" Stretch="None" />
             </Button>
             <Button x:Name="resetButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Click="resetButton_Click" Background="{x:Null}">
-                <Image Source="Assets/refresh-256.png" Width="128" Height="128" />
+                <Image Source="Assets/plus-4-128.png" Stretch="None" />
+            </Button>
+            <Button x:Name="powerButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" Background="{x:Null}" Click="powerButton_Click" >
+                <Image Source="Assets/power-48.png" Stretch="None"/>
             </Button>
         </Grid>
     </Grid>
