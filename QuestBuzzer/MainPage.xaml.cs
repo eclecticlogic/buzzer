@@ -6,7 +6,9 @@ using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.Devices.Gpio;
+using Windows.Devices;
 using Windows.UI.Xaml.Shapes;
+using Microsoft.IoT.Lightning.Providers;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -56,6 +58,10 @@ namespace QuestBuzzer
 
         private void InitGPIO()
         {
+            if (LightningProvider.IsLightningEnabled)
+            {
+                LowLevelDevicesController.DefaultProvider = LightningProvider.GetAggregateProvider();
+            }
             pins.Add(createButtonPin(5, "1", 21));
             pins.Add(createButtonPin(6, "2", 20));
             pins.Add(createButtonPin(13, "3", 9));
